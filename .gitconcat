@@ -1,0 +1,31 @@
+mootools:
+  input:
+    - Source/src/JS.Driver.Core.js
+    - Source/src/JS.Driver.Base.js
+    - Source/src/JS.Driver.MooTools.js
+  output:
+    - Source/JS.Driver.MooTools.js
+
+mootools_min:
+  filters:
+    - cat Source/JS.Driver.MooTools.js | jsmin > %{output}
+  input:
+    - Source/JS.Driver.MooTools.js
+  output:
+    - Source/JS.Driver.MooTools.min.js
+
+jquery:
+  input:
+    - Source/src/JS.Driver.Core.js
+    - Source/src/JS.Driver.Base.js
+    - Source/src/JS.Driver.jQuery.js
+  output:
+    - Source/JS.Driver.jQuery.js
+
+mootools_min:
+  filters:
+    - cat Source/JS.Driver.jQuery.js | jsmin > %{output}
+  input:
+    - Source/JS.Driver.jQuery.js
+  output:
+    - Source/JS.Driver.jQuery.min.js
