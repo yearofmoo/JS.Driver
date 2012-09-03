@@ -62,6 +62,10 @@ JS.Driver.extend({
     this.element(element).trigger('event', args);
   },
 
+  onSubmit : function(form, fn) {
+    this.element(form).submit(fn);
+  },
+
   addEvent : function(element, event, fn) {
     var that = this;
     this.element(element).addEvent(event, function(e) {

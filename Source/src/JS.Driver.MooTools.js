@@ -71,6 +71,10 @@ JSDriver.extend({
     });
   },
 
+  onSubmit : function(form, fn) {
+    this.addEvent('submit', fn);
+  },
+
   delegate : function(element, selector, event, fn) {
     this.element(element).addEvent(event + ':relay('+selector+')', fn);
   },

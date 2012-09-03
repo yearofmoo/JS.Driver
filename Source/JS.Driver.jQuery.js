@@ -11,7 +11,7 @@
           JS.Driver[i] = hash[i];
         }
       }
-    };
+    }
   };
 
 })();
@@ -65,6 +65,18 @@ JS.Driver.extend({
 
       hide : function() {
         that.hide(element);
+      },
+
+      on : function(target, event, fn) {
+        that.on(target, event, fn);
+      },
+
+      addEvent : function(event, fn) {
+        that.addEvent(element, event, fn);
+      },
+
+      removeEvent : function(event, fn) {
+        that.removeEvent(element, event, fn);
       },
 
       destroy : function() {
@@ -212,6 +224,10 @@ JS.Driver.extend({
 
   fireEvent : function(element, event, args) {
     this.element(element).trigger('event', args);
+  },
+
+  onSubmit : function(form, fn) {
+    this.element(form).submit(fn);
   },
 
   addEvent : function(element, event, fn) {
