@@ -129,12 +129,12 @@ JSDriver.extend({
 
   fadeIn : function(element, fn) {
     var morph = this.id(element).get('morph');
-    morph.start({ opacity : 1 ).chain(fn);
+    morph.start({ opacity : 1 }).chain(fn);
   },
 
   fadeOut : function(element, fn) {
     var morph = this.id(element).get('morph');
-    morph.start({ opacity : 0 ).chain(fn);
+    morph.start({ opacity : 0 }).chain(fn);
   },
 
   animate : function(element, properties, startFn, endFn) {
